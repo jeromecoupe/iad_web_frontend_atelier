@@ -1,4 +1,4 @@
-# Atelier design et développement front-end (HTML/CSS/JS)
+# Atelier design et développement web front-end (HTML/CSS/JS)
 
 L'objectif de l'atelier est de concevoir, designer, coder et mettre en ligne un site Internet responsive.
 
