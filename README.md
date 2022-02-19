@@ -26,9 +26,9 @@ Choisir un concept pour faire au minimum un site "one page"
 
 Objectif: une couleur de base (+ variantes peps / foncée / pastel) et une gamme de gris (construite à partir de la couleur de base)
 
-- photo de nature (pas d'éléments humain)
-- adobe colors ou coolors.co
-- calques de fusion et calques noirs / blanc avec transparence
+- créer une gamme à partir d'une photo de nature (pas d'éléments humain)
+- outils en ligne: [adobe color](https://github.com/jeromecoupe/iad_web_frontend_atelier) ou [coolors.co](https://coolors.co/)
+- méthode manuelle: [création de palettes complexes](https://www.smashingmagazine.com/2017/07/advanced-color-palettes-photoshop-sketch-affinity-designer/) à l'aide d'outils simples: modes de fusion et calques noirs / blanc avec transparence
 
 #### 2. Typographie
 
