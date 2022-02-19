@@ -7,9 +7,9 @@ Nous n'avons que deux semaines, il faut donc être réaliste quant au produit fi
 - Semaine 1: conception et design
 - Semaine 2: assets, code et mise en ligne
 
-### Semaine 1: conception et design
+## Semaine 1: conception et design
 
-#### Conception
+### Conception
 
 - Décider du produit (portfolio, blog, site client, etc.)
   - Identifier les contenus et fonctionnalités
@@ -18,65 +18,100 @@ Nous n'avons que deux semaines, il faut donc être réaliste quant au produit fi
   - artistique
   - technique
 
-#### Figma
+### Design
 
-- Télécharger et installer [Figma](https://www.figma.com/downloads/)
-- Principes de base
+Choisir un concept pour faire au minimum un site "one page"
 
-#### Charte Graphique
+#### 1. Colors
 
-Etablir une charte graphique:
+Objectif: une couleur de base (+ variantes peps / foncée / pastel) et une gamme de gris (construite à partir de la couleur de base)
 
-##### 1. Gamme de couleurs
+- photo de nature (pas d'éléments humain)
+- adobe colors ou coolors.co
+- calques de fusion et calques noirs / blanc avec transparence
 
-- Partir d'une photo de nature
-- Choisir une couleur et utiliser des outils [Coolors](https://coolors.co/) [Adobe Color](https://color.adobe.com/)
-- Utiliser Figma et les layers
+#### 2. Typographie
 
-##### 2. Echelle d'espacement
+Commencer par la police de labeur (texte): tester en situation réelle (bonne taille un paragraphe réel pas de lorem ipsum)
+Si besoin est, choisir aussi une police pour les titres
 
-- multiples de 5 / 6 ou 8
-- à appliquer aux interlignes, à tous les espacements verticaux, à au moins un des éléments de la grille (gutter ou colonne)
+Choisir des polices qui "vont ensemble" (font pairing)
 
-##### 3. Typographie
+- Superfamilies
+- Même designer / fondrie
+- Voir ce que les autres ont fait comme pairing (galeries, exemples, articles, etc.)
+- Caractéristiques communes (x-height, superposition, etc.)
 
-- Commencer par une police de corps de texte (police de labeur labeur)
-  - Lisibilité à taille réelle
-  - Pas de fioritures
-  - x-height élevée
-  - plusieurs graisses et variantes
-- Choisir une seconde police
-  - même designer / même fondrie
-  - conseils de pairing d/ Google fonts ou exemples
-  - fontes différentes (serif / sans serif) mais autres caractéristiques communes (superposition)
-- [Modularscale](https://www.modularscale.com/) pour l'échelle typographique. Valeurs de base: votre taille de police de corps de texte (en général 16px ou 18px) + un multiple de votre échelle d'espacement si besoin est.
+#### 3. Echelle d'espacement
 
-##### 4. Grilles
+- Choisir un nombre (5, 6 ou 8)
+- Tous vos espacement verticaux doivent être des multiples de ce nombre, y compris vos interlignes
 
-- plusieurs types de grilles
-- nous travaillerons avec une grille symétrique assez simple (12, 10 (20) ou 8 (16) colonnes)
+#### 4. Echelle typographique
 
-##### 5. Concept ou Gimmick
+https://www.modularscale.com/
 
-- Se concentrer sur quelques aspects techniques ou graphiques
-  - Systématiser un ou deux éléments de design
-  - Pousser un concept technique
+- Choisir une taille de police de base: 16 ou 18 pixels (bien spécifier px)
+- Choisir un ratio. Plus vous serez proche de 1, plus la courbe de votre échelle sera douce
+- Si vous n'avez pas assez de possibilités, ajouter un second chiffre à votre taille de police de base (généralement, ce second chiffre est un multiple de votre échelle d'espacement)
 
-### Semaine 2: assets, code et mise en ligne
+#### 5. Grille de layout
 
-- production et optimisation des assets
-  - fichiers de polices
-  - videos, images, icônes
-- faire un schéma papier des layouts
-  - identifier les breakpoints responsives
-  - identifier et créer un framework de grille générique
-  - identifier les éléments qui peuvent être abstraits (composants)
-  - identifier les "pièges" et réaliser des tests
-- code
-  - HTML (contenus et sémantique)
-  - CSS (layouts et styles graphiques)
-  - JS (interactivité)
-- mise en ligne
-  - Créer un compte Netlify
-  - Git ou pas
-  - Mise en ligne
+Objectif: pouvoir faire de la mise en page et gérer le positionement horizontal des blocks.
+
+- faire une frame à 320 px de large (small) et une autre à 1500 px de large (large), ajouter éventuellement une autre à 760 px (medium)
+- commencer avec une grille de 12 colonnes identiques en desktop / 6 colonnes en medium / 2 colonnes en small
+- les gutters (espaces vides) et les colonnes sont conforme à votre échelle d'espacement verticale
+- dans Figma: sélection d'une frame + layout grid + colonnes + mettre la grille en centré (pas en stretch) + choisir le nombre de colonnes + la dimension des gutters en px + la dimension des colonnes en px
+
+## Semaine 2: code front-end
+
+### HTML
+
+- Commencer par faire un document HTML sémantique avec l'ensemble de vos contenus
+- Utiliser les éléments à bon escient (listes, titres, header, footer, main, nav, article, etc.)
+- Appliquer la philosophie selon laquelle les vues web sont composées d'une série de composants imbiqués les uns dans les autres
+- Valider votre code HTML une fois ce dernier écrit
+- Attention à l'accessibilité
+
+### CSS
+
+#### 1. choisir une méthodologie de nommage de classes
+
+- Personellement j'utilise BEM ([Block Element Modifier](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/))
+- J'ajoute également des [prefixes (namespaces)](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/) à mes classes pour identifier leurs rôles
+
+#### 2. Variables et polices
+
+- CSS variables (custom properties): couleurs, etc.
+
+#### 3. Typographie
+
+- importer polices (@font-face)
+- kill margin top
+- Police, taille et interligne pour la police de corps de texte (html)
+- Classes pour chaque niveau de titre + variantes si besoin est (couleurs, etc)
+- Autres classes typographiques (texte intros, titres spéciaux dans footer, etc)
+
+#### 4. Utilities
+
+- Seules classes avec !important pour passer au dessus de la spécificité
+- Classes pour aligner le texte au centre, à gauche et à droite (utile pour les titres etc)
+- Spacing utilities (si besoin est)
+
+#### 5. Elements de layouts
+
+- Sections: gèrent les padding verticaux + variantes (couleurs, etc.)
+- Containers: max-width, margin pour centrer, petits padding left et right + variantes (max-width, etc)
+- Framework de grilles responsives (pour les divisions en colonnes standard)
+- Autres éléments de layout macro (pour des applications / dashboards)
+
+#### 6. Objets
+
+- classes n'ayant pas d'éléments de mise en forme, juste des comportements (fluidimg, fluidvideo, media object, etc.)
+
+#### 7. Composants
+
+- header + footer
+- identifier et réaliser les autres composants
+- certains composants ont besoin de layout (grid, flexbox, positioning)
