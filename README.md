@@ -70,16 +70,17 @@ Objectif: pouvoir faire de la mise en page et gérer le positionement horizontal
 
 - Commencer par faire un document HTML sémantique avec l'ensemble de vos contenus
 - Utiliser les éléments à bon escient (listes, titres, header, footer, main, nav, article, etc.)
-- Appliquer la philosophie selon laquelle les vues web sont composées d'une série de composants imbiqués les uns dans les autres
+- Appliquer la philosophie selon laquelle les vues web sont composées d'une série de composants imbriqués les uns dans les autres
 - Valider votre code HTML une fois ce dernier écrit
-- Attention à l'accessibilité
+- Attention à l'accessibilité (contraste couleur, etc.)
 
 ### CSS
 
-#### 1. choisir une méthodologie de nommage de classes
+#### 1. choisir une méthodologie
 
-- Personellement j'utilise BEM ([Block Element Modifier](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/))
+- Personellement j'utilise BEM pour nommer mes classes ([Block Element Modifier](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/))
 - J'ajoute également des [prefixes (namespaces)](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/) à mes classes pour identifier leurs rôles
+- Utiliser nesting pour les media queries (syntaxe moderne)
 
 #### 2. Variables et polices
 
@@ -87,7 +88,7 @@ Objectif: pouvoir faire de la mise en page et gérer le positionement horizontal
 
 #### 3. Typographie
 
-- importer polices (@font-face)
+- créer polices (@font-face)
 - kill margin top
 - Police, taille et interligne pour la police de corps de texte (html)
 - Classes pour chaque niveau de titre + variantes si besoin est (couleurs, etc)
@@ -95,7 +96,7 @@ Objectif: pouvoir faire de la mise en page et gérer le positionement horizontal
 
 #### 4. Utilities
 
-- Seules classes avec !important pour passer au dessus de la spécificité
+- Considérer d'ajouter !important pour passer au dessus de la spécificité
 - Classes pour aligner le texte au centre, à gauche et à droite (utile pour les titres etc)
 - Spacing utilities (si besoin est)
 
@@ -113,5 +114,10 @@ Objectif: pouvoir faire de la mise en page et gérer le positionement horizontal
 #### 7. Composants
 
 - header + footer
-- identifier et réaliser les autres composants
+- identifier et réaliser les autres composants (cards, sliders, etc.)
 - certains composants ont besoin de layout (grid, flexbox, positioning)
+
+#### 8. JS si besoin est
+
+- nav responsive (hamburger menu)
+- interactions "complexes"
