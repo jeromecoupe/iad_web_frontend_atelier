@@ -95,6 +95,8 @@ Commencer par faire un plan papier pour avoir une bonne idées des stratégies d
 #### 3. Typographie
 
 - charger les polices custom (@font-face) et créer les fontstacks
+  - [Google fonts en variable](https://github.com/fontsource/font-files/tree/main/fonts/variable)
+  - [Fontshare](https://www.fontshare.com/)
 - kill margin top
 - Police, taille et interligne pour la police de corps de texte (html)
 - Classes pour chaque niveau de titre + variantes si besoin est (couleurs, etc)
